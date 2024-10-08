@@ -1,0 +1,75 @@
+apiVersion: v1
+clusters:
+- cluster:
+    certificate-authority-data: LS0tLS1CRUdJTiBDRVJUSUZJQ0FURS0tLS0tCk1JSUMvakNDQWVhZ0F3SUJBZ0lCQURBTkJna3Foa2lHOXcwQkFRc0ZBREFWTVJNd0VRWURWUVFERXdwcmRXSmwKY201bGRHVnpNQjRYRFRJeU1USXhNakl4TURjeU9Gb1hEVE15TVRJd09USXhNRGN5T0Zvd0ZURVRNQkVHQTFVRQpBeE1LYTNWaVpYSnVaWFJsY3pDQ0FTSXdEUVlKS29aSWh2Y05BUUVCQlFBRGdnRVBBRENDQVFvQ2dnRUJBTGZVCkoxVks4U1lUR3loNm9qMElsa3NBaUJ5RzY3Z3BCUGIxN0QzWjFBWHphdFk3N0RRMGdjVGUrYkdLdGRVV1doY0EKNlV2WXZHNUFpRVRtcktPYjdDdDhFcFdpRXFyR3E0K2xSK3dlSHQwdDBOMTNKNWRORlVwVHBVL0p4MGM4anlUSgpRZklvRHZIZ1NteGxFTXZhTFBlTTkwVVJRQkdWUXBmWVZ2ZUJweUQ5N1U4MStUcHZlOFNoRHRnWFlNSUlZNDBhCkI0NW04dERwSjlhcDNBWmF6M3pSNmtGZDRJc3VtazJQZVV0SzMvMG1PU1ZpT3NMemlGdHJqbGVQWFdLbFNnUE0Kb1Z4c3RYalJrUkhZZDgrQUpENDFNMnI3M1V4TDIrTWJHczBnN2orWi9Ocy9rVDh0SCs1OEJDUWFRbStwa2NLdQplNmJFSlgvMHJzS1ZTS2h0aDUwQ0F3RUFBYU5aTUZjd0RnWURWUjBQQVFIL0JBUURBZ0trTUE4R0ExVWRFd0VCCi93UUZNQU1CQWY4d0hRWURWUjBPQkJZRUZDdnFaTmRjN2JOSnUxQUcwNzVwQVU4dmJuZytNQlVHQTFVZEVRUU8KTUF5Q0NtdDFZbVZ5Ym1WMFpYTXdEUVlKS29aSWh2Y05BUUVMQlFBRGdnRUJBS05JNFB1d2IvbEp3bG8xK3g2VwpBZEhpOVljOXdKaFF5azliZ1p3eURIdVVjUXdMNUR6YXlJZWRPY2pIU3hQVVY0S05SeVBGekkzU2NEb0ZIbjZjCnlRZFJ1UzZtTTRMTmxrNytVOGplMkQzOHQrQW5uREVyNzFsbGRUczJHNWJFeEFwUW1TMkUrRWJUTDZJUGtRcTkKRzJ3NTFBR2Z3QVREL1F0REZwbm53Ni9wYVYvaGZmS042dWxialFFRittdkZIV01PdGxhUEpETHBVWFMwL1hmOQp1TXpEZFdYbjZpYmEzb2dGR0EwU3RHMUhYdHc3SkpYN01KK0JPS1ExZVZhbVFHWmFQYVFmbEZMK2hzUDBQSGtjClNhVmlhcVlENVQzOTJvbzU2bWRaQi9yQW90NWlKWkxoQTRnemcxaVlXMkFDaDdMS1pTOHRMM1VkN0doS1FnMGsKcWtBPQotLS0tLUVORCBDRVJUSUZJQ0FURS0tLS0tCg==
+    server: https://276244580E0097BDD0C7E000A532C3F0.gr7.us-east-1.eks.amazonaws.com
+  name: knative.us-east-1.eksctl.io
+- cluster:
+    certificate-authority-data: LS0tLS1CRUdJTiBDRVJUSUZJQ0FURS0tLS0tCk1JSUMvakNDQWVhZ0F3SUJBZ0lCQURBTkJna3Foa2lHOXcwQkFRc0ZBREFWTVJNd0VRWURWUVFERXdwcmRXSmwKY201bGRHVnpNQjRYRFRJeU1UQXlNVEUzTkRRMU5Wb1hEVE15TVRBeE9ERTNORFExTlZvd0ZURVRNQkVHQTFVRQpBeE1LYTNWaVpYSnVaWFJsY3pDQ0FTSXdEUVlKS29aSWh2Y05BUUVCQlFBRGdnRVBBRENDQVFvQ2dnRUJBSjdHCkNrcUZ1VEVndmNqdFVMMGlFVHlRRDMyRjJMbjJ0alBxTU5LVDJOamZGRUlRYkF5UktwbVkxSzEwUzg2RmtWeGQKZlZVczk3dHRTS2xkQWoyejVrZWQ1T1h6eUErcjFRRHRrREFFV2pKaDh0RE56N3JwOVVKQk9kQ1lrU2JIVUtGego0eUJXSXFFL1hOSmQ3VHl6amhGOFZaK2s4ckttUVhqekM0cWZGMHJnaTNQZGVCbXZrQ3IvMnFaalBoQjlQQ1FNCkkxOEVnT0wvS3A0SDVxOWdXakJCRzB2UXl6ZVZTd3R2YlRMZ1FHc1ZodGpNK2VVdDNUODNxdktuS3lPWXhCRGcKYlZhOHdpQkVYY3cwNWJJai8ra0RxSHZTZ0Fsblp5bDZhRVFqa2sxdStNZlByWHV0V3MycUZINVo0T2ZRVS8rbwphdVVsTDBpMnBObTlJSHNiU2lzQ0F3RUFBYU5aTUZjd0RnWURWUjBQQVFIL0JBUURBZ0trTUE4R0ExVWRFd0VCCi93UUZNQU1CQWY4d0hRWURWUjBPQkJZRUZHWWFtMDJTQ0xjbVRyQ1F4aFMxWStCLzhFTTRNQlVHQTFVZEVRUU8KTUF5Q0NtdDFZbVZ5Ym1WMFpYTXdEUVlKS29aSWh2Y05BUUVMQlFBRGdnRUJBRGhGSXdCWjlEb2p0Wk9nejdtaQpHM0dRVTdnZ2JPUjhDajdTM1liaEhuV1NjTFhNcjU1cjVXT2RSbFZlK2lVbFBzbCtBeHd3WHhoRWIranVXcGRnCllqUllzbUpRdHQxeFhLdGtoS2QydFJFSEJnK3Y4Mmk4YjNwWEVueTh5aVFSWURhWWpYbU8wcEF5RzFHb1F0R0oKS0N4UGZ2L1dEeWcwcXMvZllqV1R5dmRzSjZSQ1ZPaWp4R0dOSWpJaWhWZm9JV2I1ZkJ3WnVHQTZjLzBrQTNkUApaMlBOL1hBS0tQeERwWGgrVTNKbHdwNDdOOG9tR0lkNG96aE4xYXRCeFU0ZFZnYm9OS3NrcFhyMElKYmNmd2hTCmlYZ2lxMHlPWDQwTUhBT1JOYmh6NEU5WUR3VWVQUm5Ua3RvV1hvMnpqWWdCV2haY0M0dlBGSUpUZ3FWc1pNZDMKeGY0PQotLS0tLUVORCBDRVJUSUZJQ0FURS0tLS0tCg==
+    server: https://BAD5A332EAA21E389110DB148F32A504.sk1.us-east-2.eks.amazonaws.com
+  name: knative.us-east-2.eksctl.io
+contexts:
+- context:
+    cluster: knative.us-east-1.eksctl.io
+    user: grethy@knative.us-east-1.eksctl.io
+  name: grethy@knative.us-east-1.eksctl.io
+- context:
+    cluster: knative.us-east-2.eksctl.io
+    user: grethy@knative.us-east-2.eksctl.io
+  name: grethy@knative.us-east-2.eksctl.io
+- context:
+    cluster: knative.us-east-1.eksctl.io
+    user: praas-gyorgy@knative.us-east-1.eksctl.io
+  name: praas-gyorgy@knative.us-east-1.eksctl.io
+current-context: grethy@knative.us-east-1.eksctl.io
+kind: Config
+preferences: {}
+users:
+- name: grethy@knative.us-east-1.eksctl.io
+  user:
+    exec:
+      apiVersion: client.authentication.k8s.io/v1beta1
+      args:
+      - eks
+      - get-token
+      - --cluster-name
+      - knative
+      - --region
+      - us-east-1
+      command: aws
+      env:
+      - name: AWS_STS_REGIONAL_ENDPOINTS
+        value: regional
+      provideClusterInfo: false
+- name: grethy@knative.us-east-2.eksctl.io
+  user:
+    exec:
+      apiVersion: client.authentication.k8s.io/v1beta1
+      args:
+      - eks
+      - get-token
+      - --cluster-name
+      - knative
+      - --region
+      - us-east-2
+      command: aws
+      env:
+      - name: AWS_STS_REGIONAL_ENDPOINTS
+        value: regional
+      provideClusterInfo: false
+- name: praas-gyorgy@knative.us-east-1.eksctl.io
+  user:
+    exec:
+      apiVersion: client.authentication.k8s.io/v1beta1
+      args:
+      - eks
+      - get-token
+      - --cluster-name
+      - knative
+      - --region
+      - us-east-1
+      command: aws
+      env:
+      - name: AWS_STS_REGIONAL_ENDPOINTS
+        value: regional
+      provideClusterInfo: false
