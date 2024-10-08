@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="VcsDirectoryMappings">
+    <mapping directory="$PROJECT_DIR$/../LambdaML" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/../praas-function-store" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/../praas-process-runtime" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/../scheduler-prototypes" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/test/examples/nbody/nbody-python" vcs="Git" />
+  </component>
+</project>

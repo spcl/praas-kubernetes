@@ -1,0 +1,15 @@
+apiVersion: serving.knative.dev/v1 # Current version of Knative
+kind: Service
+metadata:
+  name: micro_func # The name of the app
+  namespace: default # The namespace the app will use
+spec:
+  template:
+    metadata:
+      annotations:
+        autoscaling.knative.dev/max-scale: "1"
+    spec:
+      containerConcurrency: 1
+      containers:
+        - image: kind.local/micro-func:latest # The URL to the image of the app
+          imagePullPolicy: IfNotPresent

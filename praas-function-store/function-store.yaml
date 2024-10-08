@@ -1,0 +1,50 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: praas-function-store
+  namespace: praas
+spec:
+  selector:
+    matchLabels:
+      app: praas-function-store
+  template:
+    metadata:
+      annotations:
+        cluster-autoscaler.kubernetes.io/safe-to-evict: "true"
+      labels:
+        app: praas-function-store
+    spec:
+      affinity:
+        podAntiAffinity:
+          preferredDuringSchedulingIgnoredDuringExecution:
+            - podAffinityTerm:
+                labelSelector:
+                  matchLabels:
+                    app: praas-function-store
+                topologyKey: kubernetes.io/hostname
+              weight: 100
+      containers:
+        - name: function-store
+          image: function-store:latest
+          imagePullPolicy: IfNotPresent
+          securityContext:
+            allowPrivilegeEscalation: false
+            readOnlyRootFilesystem: false
+            runAsNonRoot: true
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: praas-function-store
+  namespace: praas
+  labels:
+    app: praas-function-store
+spec:
+  type: LoadBalancer
+  ports:
+    - name: http-requests
+      port: 80
+      targetPort: 8080
+      protocol: TCP
+  selector:
+    app: praas-function-store

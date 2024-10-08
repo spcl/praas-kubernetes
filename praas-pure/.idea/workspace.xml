@@ -1,0 +1,330 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AnalysisUIOptions">
+    <option name="GROUP_BY_SEVERITY" value="true" />
+  </component>
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="ALL" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="d23ff86c-8608-4091-9051-35d9641d634b" name="Changes" comment="testing and benchmarking">
+      <change beforePath="$PROJECT_DIR$/config/aws-praas.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/config/aws-praas.yaml" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Go File" />
+      </list>
+    </option>
+  </component>
+  <component name="GOROOT" url="file://$USER_HOME$/go" />
+  <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="gr/control-plane" />
+      </map>
+    </option>
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="RESET_MODE" value="HARD" />
+    <option name="ROOT_SYNC" value="DONT_SYNC" />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProblemsViewState">
+    <option name="selectedTabId" value="ProjectErrors" />
+  </component>
+  <component name="ProjectId" id="29ee5uVnHfyVYV9BrDYlNpJ9jsZ" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;DefaultGoTemplateProperty&quot;: &quot;Go File&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.go.format.on.save.advertiser.fired&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.go.formatter.settings.were.checked&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.go.migrated.go.modules.settings&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.go.modules.go.list.on.any.changes.was.set&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.go.vendoring.notification.had.been.shown&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.go.watchers.conflict.with.on.save.actions.check.performed&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;go.import.settings.migrated&quot;: &quot;true&quot;,
+    &quot;go.sdk.automatically.set&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/home/gyorgy/University/ETH/MasterThesis/praas-pure&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;run.code.analysis.last.selected.profile&quot;: &quot;aDefault&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;configurable.group.build&quot;
+  }
+}</component>
+  <component name="RecentsManager">
+    <key name="GoMoveDeclarationDialog.RECENT_KEY">
+      <recent name="$PROJECT_DIR$/pkg/config" />
+      <recent name="$PROJECT_DIR$/test" />
+      <recent name="$PROJECT_DIR$/pkg/resources" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/test" />
+      <recent name="$PROJECT_DIR$" />
+      <recent name="$PROJECT_DIR$/config" />
+      <recent name="$PROJECT_DIR$/pkg/client" />
+      <recent name="$PROJECT_DIR$/pkg/resources" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/../benchmarks/pkg/clients" />
+      <recent name="$PROJECT_DIR$/config" />
+      <recent name="$PROJECT_DIR$/../user-metrics-test/cmd" />
+      <recent name="$PROJECT_DIR$/../user-metrics-test" />
+      <recent name="$PROJECT_DIR$/pkg/scaling" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Go Test.E2E Tests">
+    <configuration default="true" type="GoApplicationRunConfiguration" factoryName="Go Application">
+      <module name="garbage-collector" />
+      <working_directory value="$PROJECT_DIR$" />
+      <kind value="PACKAGE" />
+      <package value="knative.dev/sample-controller" />
+      <directory value="$PROJECT_DIR$" />
+      <filePath value="$PROJECT_DIR$" />
+      <method v="2" />
+    </configuration>
+    <configuration name="E2E Tests (AWS)" type="GoTestRunConfiguration" factoryName="Go Test">
+      <module name="garbage-collector" />
+      <working_directory value="$PROJECT_DIR$/test/e2e" />
+      <parameters value="-kubecfg=$PROJECT_DIR$/../eksnative.yaml" />
+      <root_directory value="$PROJECT_DIR$" />
+      <kind value="PACKAGE" />
+      <package value="praas/test/e2e" />
+      <directory value="$PROJECT_DIR$" />
+      <filePath value="$PROJECT_DIR$" />
+      <framework value="gotest" />
+      <method v="2" />
+    </configuration>
+    <configuration name="E2E Tests" type="GoTestRunConfiguration" factoryName="Go Test" temporary="true">
+      <module name="garbage-collector" />
+      <working_directory value="$PROJECT_DIR$/test/e2e" />
+      <root_directory value="$PROJECT_DIR$" />
+      <kind value="PACKAGE" />
+      <package value="praas/test/e2e" />
+      <directory value="$PROJECT_DIR$" />
+      <filePath value="$PROJECT_DIR$" />
+      <framework value="gotest" />
+      <method v="2" />
+    </configuration>
+    <configuration name="TestMultiClientSessionCreateDelete (AWS)" type="GoTestRunConfiguration" factoryName="Go Test">
+      <module name="garbage-collector" />
+      <working_directory value="$PROJECT_DIR$/test/e2e" />
+      <parameters value="-kubecfg=$PROJECT_DIR$/../eksnative.yaml" />
+      <root_directory value="$PROJECT_DIR$" />
+      <kind value="PACKAGE" />
+      <package value="praas/test/e2e" />
+      <directory value="$PROJECT_DIR$" />
+      <filePath value="$PROJECT_DIR$" />
+      <framework value="gotest" />
+      <pattern value="^\QTestMultiClientSessionCreateDelete\E$" />
+      <method v="2" />
+    </configuration>
+    <configuration name="TestMultiClientSessionCreateDelete" type="GoTestRunConfiguration" factoryName="Go Test" temporary="true">
+      <module name="garbage-collector" />
+      <working_directory value="$PROJECT_DIR$/test/e2e" />
+      <root_directory value="$PROJECT_DIR$" />
+      <kind value="PACKAGE" />
+      <package value="praas/test/e2e" />
+      <directory value="$PROJECT_DIR$" />
+      <filePath value="$PROJECT_DIR$" />
+      <framework value="gotest" />
+      <pattern value="^\QTestMultiClientSessionCreateDelete\E$" />
+      <method v="2" />
+    </configuration>
+    <configuration name="TestMultiClientSwapIn (AWS)" type="GoTestRunConfiguration" factoryName="Go Test" temporary="true">
+      <module name="garbage-collector" />
+      <working_directory value="$PROJECT_DIR$/test/e2e" />
+      <parameters value="-kubecfg=$PROJECT_DIR$/../eksnative.yaml" />
+      <root_directory value="$PROJECT_DIR$" />
+      <kind value="PACKAGE" />
+      <package value="praas/test/e2e" />
+      <directory value="$PROJECT_DIR$" />
+      <filePath value="$PROJECT_DIR$" />
+      <framework value="gotest" />
+      <pattern value="^\QTestMultiClientSwapIn\E$" />
+      <method v="2" />
+    </configuration>
+    <configuration name="TestMultiClientSwapIn" type="GoTestRunConfiguration" factoryName="Go Test">
+      <module name="garbage-collector" />
+      <working_directory value="$PROJECT_DIR$/test/e2e" />
+      <root_directory value="$PROJECT_DIR$" />
+      <kind value="PACKAGE" />
+      <package value="praas/test/e2e" />
+      <directory value="$PROJECT_DIR$" />
+      <filePath value="$PROJECT_DIR$" />
+      <framework value="gotest" />
+      <pattern value="^\QTestMultiClientSwapIn\E$" />
+      <method v="2" />
+    </configuration>
+    <configuration name="TestSessionRequests" type="GoTestRunConfiguration" factoryName="Go Test" temporary="true">
+      <module name="garbage-collector" />
+      <working_directory value="$PROJECT_DIR$/test/e2e" />
+      <root_directory value="$PROJECT_DIR$" />
+      <kind value="PACKAGE" />
+      <package value="praas/test/e2e" />
+      <directory value="$PROJECT_DIR$" />
+      <filePath value="$PROJECT_DIR$" />
+      <framework value="gotest" />
+      <pattern value="^\QTestSessionRequests\E$" />
+      <method v="2" />
+    </configuration>
+    <configuration name="TestSessionSwapIn in praas/test/e2e" type="GoTestRunConfiguration" factoryName="Go Test" temporary="true" nameIsGenerated="true">
+      <module name="garbage-collector" />
+      <working_directory value="$PROJECT_DIR$/test/e2e" />
+      <root_directory value="$PROJECT_DIR$" />
+      <kind value="PACKAGE" />
+      <package value="praas/test/e2e" />
+      <directory value="$PROJECT_DIR$" />
+      <filePath value="$PROJECT_DIR$" />
+      <framework value="gotest" />
+      <pattern value="^\QTestSessionSwapIn\E$" />
+      <method v="2" />
+    </configuration>
+    <configuration default="true" type="GoTestRunConfiguration" factoryName="Go Test">
+      <module name="garbage-collector" />
+      <working_directory value="$PROJECT_DIR$" />
+      <kind value="DIRECTORY" />
+      <package value="knative.dev/sample-controller" />
+      <directory value="$PROJECT_DIR$" />
+      <filePath value="$PROJECT_DIR$" />
+      <framework value="gotest" />
+      <method v="2" />
+    </configuration>
+    <configuration name="Restart" type="ShConfigurationType">
+      <option name="SCRIPT_TEXT" value="ko delete --ignore-not-found -f config/controller.yaml &amp;&amp; ko apply -f config/controller.yaml" />
+      <option name="INDEPENDENT_SCRIPT_PATH" value="true" />
+      <option name="SCRIPT_PATH" value="" />
+      <option name="SCRIPT_OPTIONS" value="" />
+      <option name="INDEPENDENT_SCRIPT_WORKING_DIRECTORY" value="true" />
+      <option name="SCRIPT_WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="INDEPENDENT_INTERPRETER_PATH" value="true" />
+      <option name="INTERPRETER_PATH" value="/usr/bin/zsh" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="EXECUTE_IN_TERMINAL" value="true" />
+      <option name="EXECUTE_SCRIPT_FILE" value="false" />
+      <envs />
+      <method v="2" />
+    </configuration>
+    <list>
+      <item itemvalue="Go Test.E2E Tests (AWS)" />
+      <item itemvalue="Go Test.TestMultiClientSessionCreateDelete (AWS)" />
+      <item itemvalue="Go Test.TestMultiClientSwapIn" />
+      <item itemvalue="Go Test.TestMultiClientSessionCreateDelete" />
+      <item itemvalue="Go Test.TestMultiClientSwapIn (AWS)" />
+      <item itemvalue="Go Test.TestSessionRequests" />
+      <item itemvalue="Go Test.TestSessionSwapIn in praas/test/e2e" />
+      <item itemvalue="Go Test.E2E Tests" />
+      <item itemvalue="Shell Script.Restart" />
+    </list>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Go Test.E2E Tests" />
+        <item itemvalue="Go Test.TestMultiClientSessionCreateDelete" />
+        <item itemvalue="Go Test.TestMultiClientSwapIn (AWS)" />
+        <item itemvalue="Go Test.TestSessionRequests" />
+        <item itemvalue="Go Test.TestSessionSwapIn in praas/test/e2e" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.History.Properties">
+    <option name="COLUMN_ID_ORDER">
+      <list>
+        <option value="Default.Root" />
+        <option value="Default.Author" />
+        <option value="Default.Date" />
+        <option value="Default.Subject" />
+      </list>
+    </option>
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="FILTERS">
+                <map>
+                  <entry key="branch">
+                    <value>
+                      <list>
+                        <option value="gr/control-plane" />
+                      </list>
+                    </value>
+                  </entry>
+                </map>
+              </option>
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="RECENT_FILTERS">
+      <map>
+        <entry key="Branch">
+          <value>
+            <list>
+              <RecentGroup>
+                <option name="FILTER_VALUES">
+                  <option value="gr/control-plane" />
+                </option>
+              </RecentGroup>
+              <RecentGroup>
+                <option name="FILTER_VALUES">
+                  <option value="refactor" />
+                </option>
+              </RecentGroup>
+            </list>
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Control-plane REST interface tests" />
+    <MESSAGE value="formatting" />
+    <MESSAGE value="Process deletion tests" />
+    <MESSAGE value="Single process session request tests" />
+    <MESSAGE value="Start scraping faster" />
+    <MESSAGE value="Add more test cases" />
+    <MESSAGE value="Add session ID" />
+    <MESSAGE value="UUID generated session ID" />
+    <MESSAGE value="Maybe fix deletion bug" />
+    <MESSAGE value="Session swapping in" />
+    <MESSAGE value="Multi client swap in" />
+    <MESSAGE value="Multi client session tests" />
+    <MESSAGE value="Add payload sizes to request tests" />
+    <MESSAGE value="leave pods" />
+    <MESSAGE value="merge" />
+    <MESSAGE value="Add tests and session ID" />
+    <MESSAGE value="Delete test improvements" />
+    <MESSAGE value="Revised scraping" />
+    <MESSAGE value="AWS testing" />
+    <MESSAGE value="Local tests passing" />
+    <MESSAGE value="A fix idea" />
+    <MESSAGE value="Current scale issue" />
+    <MESSAGE value="Tests passing on AWS" />
+    <MESSAGE value="Add batch session creation" />
+    <MESSAGE value="testing and benchmarking" />
+    <option name="LAST_COMMIT_MESSAGE" value="testing and benchmarking" />
+  </component>
+  <component name="VgoProject">
+    <settings-migrated>true</settings-migrated>
+  </component>
+</project>

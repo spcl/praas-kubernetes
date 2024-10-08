@@ -1,0 +1,19 @@
+{
+  "name": "rtt-test",
+  "functions": {
+    "measure_rtt": [1],
+    "help_rtt": [2]
+  },
+  "requirements": [
+    {"cpu": 1, "mem": "200MiB", "instances":[1, 2]}
+  ],
+  "outputs": [1],
+  "inputs": {
+    "1": ["2", "100", "A"],
+    "2": ["1", "100"]
+  },
+  "communications": {
+    "1":  [{"dst": 2, "weight": 1}],
+    "2":  [{"dst": 1, "weight": 1}]
+  }
+}

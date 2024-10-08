@@ -1,0 +1,92 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: praas-controller
+  namespace: knative-serving
+  labels:
+    autoscaling.knative.dev/autoscaler-provider: autoscaler.praas
+    app.kubernetes.io/component: praas-controller
+    app.kubernetes.io/name: knative-serving
+    app.kubernetes.io/version: devel
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: praas-controller
+  template:
+    metadata:
+      annotations:
+        cluster-autoscaler.kubernetes.io/safe-to-evict: "true"
+      labels:
+        app: praas-controller
+        app.kubernetes.io/component: praas-controller
+        app.kubernetes.io/name: knative-serving
+        app.kubernetes.io/version: devel
+    spec:
+      # To avoid node becoming SPOF, spread our replicas to different nodes.
+      affinity:
+        podAntiAffinity:
+          preferredDuringSchedulingIgnoredDuringExecution:
+            - podAffinityTerm:
+                labelSelector:
+                  matchLabels:
+                    app: praas-controller
+                topologyKey: kubernetes.io/hostname
+              weight: 100
+
+      serviceAccountName: controller
+      containers:
+        - name: praas-controller
+          image: public.ecr.aws/s4f6z1l2/praas/control-plane:latest
+
+          resources:
+            requests:
+              cpu: 30m
+              memory: 40Mi
+            limits:
+              cpu: 300m
+              memory: 400Mi
+
+          env:
+            - name: SYSTEM_NAMESPACE
+              valueFrom:
+                fieldRef:
+                  fieldPath: metadata.namespace
+            - name: CONFIG_LOGGING_NAME
+              value: config-logging
+            - name: CONFIG_OBSERVABILITY_NAME
+              value: config-observability
+
+            # TODO(https://github.com/knative/pkg/pull/953): Remove stackdriver specific config
+            - name: METRICS_DOMAIN
+              value: knative.dev/control-plane
+
+          securityContext:
+            allowPrivilegeEscalation: false
+            readOnlyRootFilesystem: true
+            runAsNonRoot: true
+            capabilities:
+              drop:
+                - all
+
+---
+apiVersion: v1
+kind: Service
+metadata:
+  labels:
+    app: praas-controller
+    autoscaling.knative.dev/autoscaler-provider: autoscaler.praas
+    app.kubernetes.io/component: praas-controller
+    app.kubernetes.io/name: knative-serving
+    app.kubernetes.io/version: devel
+  name: praas-controller
+  namespace: knative-serving
+spec:
+  type: LoadBalancer
+  ports:
+    - name: http-requests
+      port: 8080
+      targetPort: 8080
+      protocol: TCP
+  selector:
+    app: praas-controller

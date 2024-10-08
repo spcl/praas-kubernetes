@@ -1,0 +1,12 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: app-1-process-1
+  namespace: default
+spec:
+  containers:
+  - name: praas-runtime
+    image: kind.local/container-test:latest
+    imagePullPolicy: IfNotPresent
+    ports:
+    - containerPort: 8080

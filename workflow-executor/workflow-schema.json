@@ -1,0 +1,108 @@
+{
+  "title": "Workflow",
+  "type": "object",
+  "properties": {
+    "name": {
+      "title": "Name",
+      "type": "string"
+    },
+    "functions": {
+      "title": "Functions",
+      "type": "object",
+      "additionalProperties": {
+        "type": "array",
+        "items": {
+          "type": "integer"
+        }
+      }
+    },
+    "requirements": {
+      "title": "Requirements",
+      "type": "array",
+      "items": {
+        "$ref": "#/definitions/Requirements"
+      }
+    },
+    "communications": {
+      "title": "Communications",
+      "type": "object",
+      "additionalProperties": {
+        "type": "array",
+        "items": {
+          "$ref": "#/definitions/Message"
+        }
+      }
+    },
+    "outputs": {
+      "title": "Outputs",
+      "type": "array",
+      "items": {
+        "type": "integer"
+      }
+    },
+    "inputs": {
+      "title": "Inputs",
+      "default": {},
+      "type": "object",
+      "additionalProperties": {
+        "type": "array",
+        "items": {
+          "type": "string"
+        }
+      }
+    }
+  },
+  "required": [
+    "name",
+    "functions",
+    "requirements",
+    "communications",
+    "outputs"
+  ],
+  "definitions": {
+    "Requirements": {
+      "title": "Requirements",
+      "type": "object",
+      "properties": {
+        "cpu": {
+          "title": "Cpu",
+          "type": "integer"
+        },
+        "mem": {
+          "title": "Mem",
+          "type": "string"
+        },
+        "instances": {
+          "title": "Instances",
+          "type": "array",
+          "items": {
+            "type": "integer"
+          }
+        }
+      },
+      "required": [
+        "cpu",
+        "mem",
+        "instances"
+      ]
+    },
+    "Message": {
+      "title": "Message",
+      "type": "object",
+      "properties": {
+        "dst": {
+          "title": "Dst",
+          "type": "integer"
+        },
+        "weight": {
+          "title": "Weight",
+          "default": 1,
+          "type": "integer"
+        }
+      },
+      "required": [
+        "dst"
+      ]
+    }
+  }
+}

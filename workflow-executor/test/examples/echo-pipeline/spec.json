@@ -1,0 +1,18 @@
+{
+  "name": "echo-pipeline",
+  "functions": {
+    "echo": [1, 2, 3]
+  },
+  "requirements": [
+    {"cpu": 1, "mem": "100MiB", "instances":[1, 2, 3]}
+  ],
+  "outputs": [3],
+  "inputs": {
+    "1": ["Hello"],
+    "2": ["Hallo"]
+  },
+  "communications": {
+    "1":  [{"dst": 2, "weight": 1}],
+    "2":  [{"dst": 3, "weight": 1}]
+  }
+}

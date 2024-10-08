@@ -1,0 +1,22 @@
+{
+  "name": "excamera",
+  "functions": {
+    "vpxenc": [1, 2, 3],
+    "decode": [4, 5, 6],
+    "encgs": [7, 8],
+    "rebase": [9]
+  },
+  "requirements": [
+    {"cpu": 1, "mem": "2GiB", "instances":[1, 2, 3, 4, 5, 6, 7, 8, 9]}
+  ],
+  "outputs": [9],
+  "communications": {
+    "1":  [{"dst": 4, "weight": 2}],
+    "2":  [{"dst": 5, "weight": 2}, {"dst": 7, "weight": 2}],
+    "3":  [{"dst": 6, "weight": 2}, {"dst": 8, "weight": 2}, {"dst": 9, "weight": 1}],
+    "4":  [{"dst": 7, "weight": 1}],
+    "5":  [{"dst": 8, "weight": 1}],
+    "7":  [{"dst": 9, "weight": 1}],
+    "8":  [{"dst": 9, "weight": 1}]
+  }
+}

@@ -1,0 +1,7 @@
+praas_url: http://praas-controller.praas:8080
+process_limit: 8
+cpu_limit: 8
+mem_limit: 31GiB
+knative_url_template: "http://{}.default.34.199.73.58.sslip.io"
+redis_host: "redis-cluster.praas"
+redis_port: 6379

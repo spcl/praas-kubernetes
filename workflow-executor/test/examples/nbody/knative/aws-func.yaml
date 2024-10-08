@@ -1,0 +1,33 @@
+apiVersion: serving.knative.dev/v1 # Current version of Knative
+kind: Service
+metadata:
+  name: n-body # The name of the app
+  namespace: default # The namespace the app will use
+spec:
+  template:
+    metadata:
+      annotations:
+        autoscaling.knative.dev/target-utilization-percentage: "100"
+        autoscaling.knative.dev/scale-down-delay: "1h"
+    spec:
+      containerConcurrency: 1
+      containers:
+        - image: public.ecr.aws/s4f6z1l2/praas/knative-bench-img:nbody-worker
+          imagePullPolicy: Always
+---
+apiVersion: serving.knative.dev/v1 # Current version of Knative
+kind: Service
+metadata:
+  name: leader # The name of the app
+  namespace: default # The namespace the app will use
+spec:
+  template:
+    metadata:
+      annotations:
+        autoscaling.knative.dev/target-utilization-percentage: "100"
+        autoscaling.knative.dev/scale-down-delay: "1h"
+    spec:
+      containerConcurrency: 1
+      containers:
+        - image: public.ecr.aws/s4f6z1l2/praas/knative-bench-img:nbody-leader # The URL to the image of the app
+          imagePullPolicy: Always

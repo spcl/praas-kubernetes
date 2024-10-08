@@ -1,0 +1,7 @@
+apiVersion: v1
+kind: Namespace
+metadata:
+  name: praas
+  labels:
+    app.kubernetes.io/name: praas
+    app.kubernetes.io/version: devel

@@ -1,0 +1,19 @@
+{
+  "name": "micro_bench-pipline",
+  "functions": {
+    "micro_func": [1, 2, 3]
+  },
+  "requirements": [
+    {"cpu": 1, "mem": "200MiB", "instances":[1, 2, 3]}
+  ],
+  "outputs": [1, 2, 3],
+  "inputs": {
+    "1": ["[]", "[2]", "[1, 2, 3]"],
+    "2": ["[1]", "[3]", "[]"],
+    "3": ["[2]", "[]", "[]"]
+  },
+  "communications": {
+    "1":  [{"dst": 2}],
+    "2":  [{"dst": 3}]
+  }
+}

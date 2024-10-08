@@ -1,0 +1,6 @@
+executor_id: "1001"
+recv_timeout: "1800"
+function_dir: "/tmp/images"
+funcwork_dir: "/tmp/workspace"
+function_store: "http://praas-function-store.praas"
+process_nameservice: "http://praas-controller.praas:8080"

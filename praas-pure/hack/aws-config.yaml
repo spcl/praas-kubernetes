@@ -1,0 +1,13 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: config-praas
+  namespace: praas
+data:
+  container-image: "public.ecr.aws/s4f6z1l2/praas/container@sha256:8a732461b043ffaa5072cf8a5821ab964cc145ad95bb0e4ae308dc21b6c68d0d"
+  container-namespace: "default"
+  container-metrics-endpoint: "/custom-metrics"
+  container-metrics-port: "8080"
+  redis-address: "redis-cluster.praas:6379"
+  metric-time: "60"
+  max-funcs-per-process: "2"

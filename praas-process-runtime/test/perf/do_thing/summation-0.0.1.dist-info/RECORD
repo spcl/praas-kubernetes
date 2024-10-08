@@ -1,0 +1,12 @@
+summation-0.0.1.dist-info/INSTALLER,sha256=zuuue4knoyJ-UwPPXg8fezS7VCrXJQrAP7zeNuwvFQg,4
+summation-0.0.1.dist-info/METADATA,sha256=ffcaaBtB-DLOzZK2Z4prxpUWVOJzc7Ou3kEJrE1BB4U,97
+summation-0.0.1.dist-info/RECORD,,
+summation-0.0.1.dist-info/REQUESTED,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+summation-0.0.1.dist-info/WHEEL,sha256=NaLmgHHW_f9jTvv_wRh9vcK7c7EK9o5fwsIXMOzoGgM,87
+summation-0.0.1.dist-info/direct_url.json,sha256=o1IgeE2IILFNjEL8loWPcx64W64o5Sid1OtA8w2LH8E,87
+summation/__init__.py,sha256=Gt0SezirlPMq9-JkJC2GrTc7nBs2G5ZsG3v_qT6QPC4,26
+summation/__pycache__/__init__.cpython-38.pyc,,
+summation/__pycache__/another_file.cpython-38.pyc,,
+summation/__pycache__/sum.cpython-38.pyc,,
+summation/another_file.py,sha256=9CJ-foW-EK8v9ggdfRYx5ZBP3rpQqfQMuEhzRi7F4lY,69
+summation/sum.py,sha256=WTAb6UYevtA_iQWUzASvowidMBrxaK0QJ5ZD7zr8SZs,246

@@ -1,0 +1,83 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: praas-controller
+  namespace: praas
+  labels:
+    app.kubernetes.io/component: control-plane
+    app.kubernetes.io/name: praas
+    app.kubernetes.io/version: devel
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: praas-controller
+  template:
+    metadata:
+      annotations:
+        cluster-autoscaler.kubernetes.io/safe-to-evict: "true"
+      labels:
+        app: praas-controller
+        app.kubernetes.io/component: praas-controller
+        app.kubernetes.io/name: praas
+        app.kubernetes.io/version: devel
+    spec:
+      # To avoid node becoming SPOF, spread our replicas to different nodes.
+      affinity:
+        podAntiAffinity:
+          preferredDuringSchedulingIgnoredDuringExecution:
+            - podAffinityTerm:
+                labelSelector:
+                  matchLabels:
+                    app: praas-controller
+                topologyKey: kubernetes.io/hostname
+              weight: 100
+
+      serviceAccountName: controller
+      containers:
+        - name: praas-controller
+          # This is the Go import path for the binary that is containerized
+          # and substituted here.
+          image: ko://praas/cmd/control-plane
+
+          resources:
+            requests:
+              cpu: 30m
+              memory: 40Mi
+            limits:
+              cpu: 300m
+              memory: 400Mi
+
+          env:
+            - name: SYSTEM_NAMESPACE
+              valueFrom:
+                fieldRef:
+                  fieldPath: metadata.namespace
+
+          securityContext:
+            allowPrivilegeEscalation: false
+            readOnlyRootFilesystem: true
+            runAsNonRoot: true
+            capabilities:
+              drop:
+                - all
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: praas-controller
+  namespace: praas
+  labels:
+    app: praas-controller
+    app.kubernetes.io/component: control-plane
+    app.kubernetes.io/name: praas
+    app.kubernetes.io/version: devel
+spec:
+  type: LoadBalancer
+  selector:
+    app: praas-controller
+  ports:
+    - name: http-requests
+      port: 8080
+      targetPort: 8080
+      protocol: TCP

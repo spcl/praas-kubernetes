@@ -1,0 +1,31 @@
+apiVersion: serving.knative.dev/v1 # Current version of Knative
+kind: Service
+metadata:
+  name: measure-rtt # The name of the app
+  namespace: default # The namespace the app will use
+spec:
+  template:
+    metadata:
+      annotations:
+        autoscaling.knative.dev/max-scale: "1"
+    spec:
+      containerConcurrency: 1
+      containers:
+        - image: public.ecr.aws/s4f6z1l2/praas/knative-bench-img:measure-rtt
+          imagePullPolicy: Always
+---
+apiVersion: serving.knative.dev/v1 # Current version of Knative
+kind: Service
+metadata:
+  name: help-rtt # The name of the app
+  namespace: default # The namespace the app will use
+spec:
+  template:
+    metadata:
+      annotations:
+        autoscaling.knative.dev/max-scale: "1"
+    spec:
+      containerConcurrency: 1
+      containers:
+        - image: public.ecr.aws/s4f6z1l2/praas/knative-bench-img:help-rtt # The URL to the image of the app
+          imagePullPolicy: Always
