@@ -1,0 +1,6 @@
+NAMESPACE = "default"
+APP_LABELS = ["kmeans-00001"]
+
+# NAMESPACE = "knative-serving"
+# APP_LABELS = ["autoscaler"]
+KUBECONFIG = "/home/gyorgy/University/ETH/MasterThesis/eksnative.yaml"
